@@ -54,7 +54,8 @@
 
         newList.setAttribute("id", "favorite-subject");
         newList.setAttribute("class", "newly-created");
-        //newList.setAttribute("asdfsdf", "newly-created");
+        newList.classList.add("newly-created");
+        // newList.classList
 
         // Todo 2.5 Delete the second list item in the unordered list
         list.removeChild(list.children[1]);
@@ -62,10 +63,20 @@
 
         // Checkpoint 2.3 Checkpoint what is the difference between node and element
 
+        // Node: In the DOM, a node is a generic term for any type of object in the DOM hierarchy. Nodes can be elements, attributes, text, etc. All of these are considered nodes. Nodes are part of the larger tree-like structure of the DOM.
+
+        //Element: An element is a specific type of node in the DOM. Elements are the building blocks of the DOM, representing the actual HTML tags in the document. For example, <div>, <p>, <ul>, etc., are all elements. Elements are a subset of nodes.
+
+        //So, every element is a node, but not every node is necessarily an element.
+
 
         // Bonus Todo 2.6 Select the parent of the unordered list.
+        const parentOfList = list.parentNode;
+        console.log(parentOfList);
 
         // Bonus Todo 2.7 Select the previous sibling of the list item you previously created
+        const previousSibling = newList.previousElementSibling;
+        console.log(previousSibling);
     </script>
 </body>
 
